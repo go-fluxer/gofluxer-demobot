@@ -1,0 +1,17 @@
+.vscode/
+.idea/
+test/
+test.yaml
+.env
+.DS_Store
+*.exe
+*.dll
+*.so
+*.log
+*.zip
+*.rar
+*.tar.gz
+*.jar
+*.test
+*.out
+*.agent
