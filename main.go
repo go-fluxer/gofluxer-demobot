@@ -32,6 +32,8 @@ func main() {
 	}
 
 	bot := gofluxer.NewBot(cfg.Token, cfg.Prefix)
+	// bot.NewBotInstance("https://example.com/api/v1", "wss://example.com/gateway/?v=1")
+	// The bot.NewBotInstance() function allows you to use a 3rd party Fluxer instance instead of using the main one.
 
 	bot.OnMessage(func(m *gofluxer.Message) {
 		fmt.Printf("[%s]: %s\n", m.Author.Username, m.Content)
@@ -82,7 +84,7 @@ func main() {
 
 	bot.AddCommand("test-sowner", func(m *gofluxer.Message, args []string) {
 		if !bot.IsOwner(m) {
-			bot.SendMessage(m.ChannelID, "You need to have **SERVER OWNER** permission to use this command.")
+			bot.SendMessage(m.ChannelID, "You need to have the **SERVER OWNER** permission to use this command.")
 			return
 		}
 		bot.SendMessage(m.ChannelID, "Hello server owner")
@@ -90,7 +92,7 @@ func main() {
 
 	bot.AddCommand("test-nsfw", func(m *gofluxer.Message, args []string) {
 		if !bot.IsNSFW(m.ChannelID) {
-			bot.SendMessage(m.ChannelID, "This command can only be used in NSFW marked channels for safety reason")
+			bot.SendMessage(m.ChannelID, "This command can only be used in NSFW marked channels for safety reasons")
 			return
 		}
 
@@ -110,8 +112,5 @@ func main() {
 
 
 
-	fmt.Println("[Fluxer.app] Bot is Ready")
-	if err := bot.Run(); err != nil {
-		fmt.Printf("[Fluxer.app] Bot has stopped: %v\n", err)
-	}
+	bot.Run()
 }

@@ -15,7 +15,9 @@ Please ensure you have Go 1.21 or newer before trying out this project.
 ```json
 {
 	"FLUXERBOTTOKEN": "", #Your Fluxer.app bot token
-	"FLUXERBOTPREFIX": "!" #Prefix for the Fluxer.app bot
+	"FLUXERBOTPREFIX": "!", #Prefix for the Fluxer.app bot
+	"FLUXERBASEURL": "", #The base API url if the Fluxer instance (UNUSED)
+	"FLUXERGATEWAYURL": "" #The websocket base url (UNUSED)
 }
 ```
 
