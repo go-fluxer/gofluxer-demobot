@@ -17,7 +17,10 @@ Please ensure you have Go 1.21 or newer before trying out this project.
 	"FLUXERBOTTOKEN": "", #Your Fluxer.app bot token
 	"FLUXERBOTPREFIX": "!", #Prefix for the Fluxer.app bot
 	"FLUXERBASEURL": "", #The base API url if the Fluxer instance (UNUSED)
-	"FLUXERGATEWAYURL": "" #The websocket base url (UNUSED)
+	"FLUXERGATEWAYURL": "", #The websocket base url (UNUSED)
+	"FLUXEROWNERID": "", #The bot owner's user ID (UNUSED)
+	"FLUXERWEBHOOKID": "", #Webhook ID
+	"FLUXERWEBHOOKTOKEN": "" #Webhook Token
 }
 ```
 

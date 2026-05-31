@@ -2,6 +2,7 @@
 .idea/
 test/
 test.yaml
+venv
 .env
 .DS_Store
 *.exe
@@ -15,3 +16,9 @@ test.yaml
 *.test
 *.out
 *.agent
+
+*.exe~
+*.dylib
+*.test
+vendor/
+gopath/
